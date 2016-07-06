@@ -5,7 +5,9 @@ put in order
 move forward by one place
 if anything was swapped, repeat with arr from first element to last-1
 '''
+#0:00:00.003000 time
 import random
+import datetime
 
 def bubblesort(x):
 	swapped = True;
@@ -31,5 +33,14 @@ def bubblesort(x):
 a = []
 for i in range(0,101):
 	a.append(random.randint(0,10000))
+
+t = datetime.datetime.now()
+
 x = bubblesort(a)
+
+w = datetime.datetime.now()
+
+time = w-t
+print time
+
 print x
